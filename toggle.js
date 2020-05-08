@@ -1,16 +1,16 @@
 toggle = {
 	toggle: function(prefix = "data") {
 		$(`[${prefix}-show]`).on("click", function(){
-			let element = $(this).data("data-show");
+			let element = $(this).attr(`${prefix}-show`);
 			$(element).show();
 			$(element).removeAttr("hidden");
 		});
 		$(`[${prefix}-hide]`).on("click", function(){
-			let element = $(this).data("data-hide");
+			let element = $(this).attr(`${prefix}-hide`);
 			$(element).hide();
 		});
 		$(`[${prefix}-toggle]`).on("click", function(){
-			let element = $(this).data("data-toggle");
+			let element = $(this).attr(`${prefix}-toggle`);
 			$(element).toggle();
 		});
 	}
