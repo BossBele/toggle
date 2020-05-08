@@ -1,4 +1,4 @@
-toggle = {
+window.toggle = {
 	toggle: function(prefix = "data") {
 		$(`[${prefix}-show]`).on("click", function(){
 			let element = $(this).attr(`${prefix}-show`);
