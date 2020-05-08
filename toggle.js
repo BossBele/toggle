@@ -1,14 +1,19 @@
+toggle = {
+	toggle: function(prefix = "data") {
+		$(`[${prefix}-show]`).on("click", function(){
+      let element = $(this).data("data-show");
+      $(element).show();
+    });
+    $(`[${prefix}-hide]`).on("click", function(){
+      let element = $(this).data("data-hide");
+      $(element).hide();
+    });
+    $(`[${prefix}-toggle]`).on("click", function(){
+      let element = $(this).data("data-toggle");
+      $(element).toggle();
+    });
+	}
+}
 $(function(){
-  $("[data-show]").on("click", function(){
-    let element = $(this).data("data-show");
-    $(element).show();
-  });
-  $("[data-hide]").on("click", function(){
-    let element = $(this).data("data-hide");
-    $(element).hide();
-  });
-  $("[data-toggle]").on("click", function(){
-    let element = $(this).data("data-toggle");
-    $(element).toggle();
-  });
+  toggle.toggle();
 });
